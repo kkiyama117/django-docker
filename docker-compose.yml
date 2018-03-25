@@ -1,0 +1,10 @@
+version: "3"
+services:
+  server:
+    image: nginx
+    volumes:
+      - .docker/nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
+  ports:
+   - "80:80"
+  environment:
+   - NGINX_PORT=80
