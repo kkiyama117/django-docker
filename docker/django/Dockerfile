@@ -1,0 +1,15 @@
+FROM python:3.6
+ENV PYTHONUNBUFFERED 1
+
+ADD . /uwsgi
+
+RUN mkdir -p /mainHP
+RUN mkdir -p /static
+ADD mainHP /mainHP
+ADD static /static
+
+WORKDIR /mainHP
+CMD pip install -r /mainHP/requirements.in
+
+WORKDIR /uwsgi
+RUN pip install -r /uwsgi/requirements.in
