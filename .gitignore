@@ -5,7 +5,7 @@ docker/django/mainHP/venv/
 docker/django/mainHP/__pycache__/
 docker/django/mainHP/mainHP/settings/__pycache__/
 docker/django/mainHP/main/__pycache__/
-docker/django/mainHP/transfacil/__pycache__/
+docker/django/mainHP/transfacils/__pycache__/
 
 docker/django/mainHP/db.sqlite3
 
