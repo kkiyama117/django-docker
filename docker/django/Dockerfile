@@ -15,5 +15,6 @@ WORKDIR /mainHP
 RUN pip install -r /mainHP/requirements.in
 CMD python manage.py makemigrations
 CMD python manage.py migrate
+CMD python manage.py collectstatic
 
 WORKDIR /uwsgi
