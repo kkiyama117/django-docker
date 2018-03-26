@@ -1,8 +1,10 @@
 docker/django/mainHP/.idea
 
-docker/django/mainHP/venv
+docker/django/mainHP/venv/
 
 docker/django/mainHP/__pycache__/
 docker/django/mainHP/mainHP/settings/__pycache__/
+
+docker/django/mainHP/db.sqlite3
 
 docker/django/mainHP/mainHP/settings/development.py
