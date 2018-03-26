@@ -1,9 +1,5 @@
 from .common import *
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR =os.path.dirname( os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
@@ -13,8 +9,7 @@ SECRET_KEY = '1tn#1tvf^=ktrpw--zr)yvu@38!g$#mbujazl#2iyo5bz@6q5v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['133.130.113.34.xip.io']
-
+ALLOWED_HOSTS = ['localhost', '133.130.113.34.xip.io']
 
 ROOT_URLCONF = 'mainHP.urls'
 
@@ -32,4 +27,4 @@ DATABASES = {
     }
 }
 
-STATIC_ROOT='/static/'
+STATIC_ROOT = '/static/'
