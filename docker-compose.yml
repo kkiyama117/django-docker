@@ -1,15 +1,6 @@
 version: "3"
-services:
-  db:
-    image: postgres:latest
-    restart: always
-    expose:
-      - "5432"
-    environment:
-      POSTGRES_USER: kiyama
-      POSTGRES_PASSWORD: example
-      POSTGRES_DB: main_db
 
+services:
   server:
     image: nginx
     volumes:
@@ -36,7 +27,3 @@ services:
       - ./docker/django:/uwsgi
     expose:
       - "8080"
-    depends_on:
-      - db
-    links:
-      - db

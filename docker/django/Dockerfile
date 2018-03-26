@@ -8,8 +8,12 @@ RUN mkdir -p /static
 ADD mainHP /mainHP
 ADD static /static
 
-WORKDIR /mainHP
-CMD pip install -r /mainHP/requirements.in
-
 WORKDIR /uwsgi
 RUN pip install -r /uwsgi/requirements.in
+
+WORKDIR /mainHP
+RUN pip install -r /mainHP/requirements.in
+CMD python manage.py makemigrations
+CMD python manage.py migrate
+
+WORKDIR /uwsgi
