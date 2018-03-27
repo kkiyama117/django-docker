@@ -10,3 +10,4 @@ docker/django/mainHP/transfacils/__pycache__/
 docker/django/mainHP/db.sqlite3
 
 docker/django/mainHP/mainHP/settings/development.py
+docker/django/mainHP/*/migrations/
