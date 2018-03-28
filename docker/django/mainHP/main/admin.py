@@ -1,21 +1,9 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from django.contrib.auth.forms import UserChangeForm, UserCreationForm
 from django.utils.translation import ugettext_lazy as _
 
 from .models import User
-
-
-class MyUserChangeForm(UserChangeForm):
-    class Meta:
-        model = User
-        fields = '__all__'
-
-
-class MyUserCreationForm(UserCreationForm):
-    class Meta:
-        model = User
-        fields = ('email', 'tel',)
+from .utils import MyUserChangeForm, MyUserCreationForm
 
 
 class MyUserAdmin(UserAdmin):
