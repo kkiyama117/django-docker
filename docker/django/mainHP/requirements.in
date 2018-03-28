@@ -3,3 +3,4 @@ django
 Jinja2
 pillow
 django-environ
+djangorestframework

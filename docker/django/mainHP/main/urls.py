@@ -1,10 +1,15 @@
 from django.contrib.auth import views as auth_views
-from django.urls import path
+from django.urls import include, path
 
 from . import views
 from .forms import LoginForm
+from rest_framework import routers
+from .views import UserViewSet
 
 app_name = 'main'
+
+router = routers.DefaultRouter()
+router.register(r'users', UserViewSet)
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -24,4 +29,5 @@ urlpatterns = [
         {'template_name': 'main/index.html'},
         name='logout'
     ),
+    path('api/', include(router.urls))
 ]

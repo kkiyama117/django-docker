@@ -3,6 +3,10 @@ from django.shortcuts import render, redirect
 from django.views.decorators.http import require_POST
 
 from .forms import RegisterForm
+from rest_framework import viewsets, filters
+
+from .models import User
+from .serializer import UserSerializer
 
 
 def index(request):
@@ -38,3 +42,8 @@ def register_save(request):
         'form': form,
     }
     return render(request, 'main/register.html', context)
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
