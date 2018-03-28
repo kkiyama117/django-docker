@@ -1,3 +1,6 @@
+django-debug-toolbar
 django
 Jinja2
 pillow
+django-environ
+psycopg2-binary

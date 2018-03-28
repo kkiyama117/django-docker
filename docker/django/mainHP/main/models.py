@@ -16,10 +16,10 @@ class UserManager(BaseUserManager):
         """Create and save a user with the given username, email, and
         password."""
         if not email:
-            raise ValueError('The given email must be set')
+            raise ValueError('Email Address を設定してください')
         email = self.normalize_email(email)
         if not tel:
-            raise ValueError("tel num")
+            raise ValueError("電話番号を設定してください")
 
         user = self.model(email=email, tel=tel, **extra_fields)
         user.set_password(password)
@@ -49,7 +49,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_('email address'), unique=True)
     first_name = models.CharField(_('first name'), max_length=10, blank=False)
     last_name = models.CharField(_('last name'), max_length=10, blank=False)
-    tel = models.CharField(_('電話番号'), blank=False,
+    tel = models.CharField(_('tel number'), blank=False,
                            unique=True, max_length=12)
 
     is_staff = models.BooleanField(
@@ -61,7 +61,6 @@ class User(AbstractBaseUser, PermissionsMixin):
         _('active'),
         default=True,
         help_text=_(
-            'Designates whether this user should be treated as active. '
             'Unselect this instead of deleting accounts.'
         ),
     )

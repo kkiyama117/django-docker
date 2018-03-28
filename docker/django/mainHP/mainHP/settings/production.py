@@ -11,8 +11,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '133.130.113.34.xip.io']
 
-ROOT_URLCONF = 'mainHP.urls'
-
 WSGI_APPLICATION = 'mainHP.wsgi.application'
 
 # Database
