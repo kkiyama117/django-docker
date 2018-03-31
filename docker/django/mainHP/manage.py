@@ -6,7 +6,6 @@ import environ
 
 env = environ.Env()
 
-# 環境変数でDJANGO_READ_ENV_FILEをTrueにしておくと.envを読んでくれる。
 READ_ENV_FILE = env.bool('DJANGO_READ_ENV_FILE', default=True)
 env_base = environ.Path(__file__) - 1
 if READ_ENV_FILE:

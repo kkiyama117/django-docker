@@ -1,6 +1,7 @@
-django-debug-toolbar
 django
-Jinja2
-pillow
+django-debug-toolbar
 django-environ
 djangorestframework
+Jinja2
+pillow
+pytest

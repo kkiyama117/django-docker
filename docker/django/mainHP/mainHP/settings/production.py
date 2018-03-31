@@ -9,7 +9,7 @@ SECRET_KEY = '1tn#1tvf^=ktrpw--zr)yvu@38!g$#mbujazl#2iyo5bz@6q5v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '133.130.113.34.xip.io']
+ALLOWED_HOSTS = ['localhost', '133.130.113.34.xip.io', '13.250.165.215.xip.io']
 
 WSGI_APPLICATION = 'mainHP.wsgi.application'
 
