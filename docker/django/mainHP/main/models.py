@@ -20,7 +20,7 @@ class UserManager(BaseUserManager):
         email = self.normalize_email(email)
         if not tel:
             raise ValueError("電話番号を設定してください")
-
+        extra_fields.setdefault('is_superuser', False)
         user = self.model(email=email, tel=tel, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)

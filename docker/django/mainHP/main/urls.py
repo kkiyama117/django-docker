@@ -4,12 +4,13 @@ from django.urls import include, path
 from . import views
 from .forms import LoginForm
 from rest_framework import routers
-from .views import UserViewSet
+from .api import UserViewSet
 
 app_name = 'main'
 
 router = routers.DefaultRouter()
-router.register(r'users', UserViewSet)
+
+router.register(r'users', UserViewSet, base_name="user")
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -29,5 +30,5 @@ urlpatterns = [
         {'template_name': 'main/index.html'},
         name='logout'
     ),
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
 ]

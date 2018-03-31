@@ -22,6 +22,8 @@ urlpatterns = [
     path('', include('main.urls')),
     path('trans/', include('transfacils.urls')),
     path('admin/', admin.site.urls, name="admin"),
+    path('api-auth/', include('rest_framework.urls',
+                              namespace='rest_framework')),
 ]
 if settings.DEBUG:
     urlpatterns = [path('__debug__/',
