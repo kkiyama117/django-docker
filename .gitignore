@@ -9,6 +9,7 @@ django/mainHP/mainHP/settings/__pycache__/
 django/mainHP/main/__pycache__/
 django/mainHP/transfacils/__pycache__/
 
+django/static
 django/mainHP/static
 
 django/mainHP/.pytest_cache
