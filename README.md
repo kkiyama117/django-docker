@@ -6,6 +6,11 @@
 - python
 - django
 
+### setting
+- django - settings.py
+  - `STATIC_ROOT = "/static/"`
+  - `STATIC_URL = "/static/"`
+
 ## Usage
 ### initializing
 
