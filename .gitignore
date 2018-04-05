@@ -1,25 +1,22 @@
-docker/django/mainHP/.idea
-docker/npm/.idea
+django/mainHP/.idea
+npm/.idea
 
-docker/django/mainHP/venv/
-docker/django/mainHP/.coverage
-docker/django/mainHP/__pycache__/
-docker/django/mainHP/mainHP/__pycache__/
-docker/django/mainHP/mainHP/settings/__pycache__/
-docker/django/mainHP/main/__pycache__/
-docker/django/mainHP/transfacils/__pycache__/
+django/mainHP/venv/
+django/mainHP/.coverage
+django/mainHP/__pycache__/
+django/mainHP/mainHP/__pycache__/
+django/mainHP/mainHP/settings/__pycache__/
+django/mainHP/main/__pycache__/
+django/mainHP/transfacils/__pycache__/
 
-docker/django/mainHP/static
+django/mainHP/static
 
-docker/django/mainHP/.pytest_cache
-docker/django/mainHP/.coverage
-docker/django/mainHP/mainHP/.pytest_cache
-docker/django/mainHP/mainHP/.coverage
+django/mainHP/.pytest_cache
+django/mainHP/.coverage
+django/mainHP/mainHP/.pytest_cache
+django/mainHP/mainHP/.coverage
 
-docker/django/mainHP/db.sqlite3
+django/mainHP/db.sqlite3
 
-docker/django/mainHP/mainHP/settings/development.py
-docker/django/mainHP/*/migrations/
-
-docker/npm/node_modules
-docker/npm/package-lock.json
+django/mainHP/mainHP/settings/development.py
+django/mainHP/*/migrations/

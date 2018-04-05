@@ -4,9 +4,9 @@ services:
   server:
     image: nginx
     volumes:
-      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ./docker/django/static:/static
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./django/static:/static
     ports:
       - "80:80"
     depends_on:
@@ -20,12 +20,12 @@ services:
     tty: true
     stdin_open: true
     build:
-      context: ./docker/django
+      context: ./django
     command: uwsgi --ini uwsgi.ini
     volumes:
-      - ./docker/django/mainHP:/mainHP
-      - ./docker/django/static:/static
-      - ./docker/django:/uwsgi
+      - ./django/mainHP:/mainHP
+      - ./django/static:/static
+      - ./django:/uwsgi
     expose:
       - "8080"
     environment:

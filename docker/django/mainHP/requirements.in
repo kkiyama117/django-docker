@@ -1,7 +1,0 @@
-django
-django-debug-toolbar
-django-environ
-djangorestframework
-Jinja2
-pillow
-pytest
