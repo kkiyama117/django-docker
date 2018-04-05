@@ -1,12 +1,25 @@
 # myHP
 ## You need
+
 - docker
 - docker-compose
+- python
+- django
 
 ## Usage
+### initializing
+
 ```bash
 # development server
-cd docker/django/mainHP
+cd django
+django-admin startproject mainHP
+```
+
+### Running
+
+```bash
+# development server
+cd django/mainHP
 # if it is your first run
 # python manage.py makemigrations
 # python manage.py migrate
@@ -34,7 +47,7 @@ $ docker-compose -f docker-compose.dev.yml run web /bin/bash
 
 
 ```bash
-# production server with docker
+# production server with docker in project root on remote server
 mkdir django/static
 $ docker-compose build
 $ docker-compose up -d
