@@ -15,6 +15,7 @@ django/mainHP/static
 django/mainHP/.pytest_cache
 django/mainHP/.coverage
 django/mainHP/mainHP/.pytest_cache
+django/mainHP/mainHP/.tox
 django/mainHP/mainHP/.coverage
 
 django/mainHP/db.sqlite3
