@@ -16,6 +16,9 @@ python manage.py runserver
 
 ```bash
 # production server with docker
+cd mainHP
 $ docker-compose build
 $ docker-compose up
+# run shell command
+# $ docker-compose run web /bin/bash
 ```
