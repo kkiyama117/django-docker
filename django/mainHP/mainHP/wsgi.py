@@ -11,6 +11,12 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mainHP.settings.production")
+if os.environ["ENVIRONMENT"] == "production" or\
+        os.environ["ENVIRONMENT"] == "staging":
+    setting = "mainHP.settings.production"
+else:
+    setting = "mainHP.settings.development"
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", setting)
 
 application = get_wsgi_application()

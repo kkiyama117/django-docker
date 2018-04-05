@@ -18,6 +18,5 @@ django/mainHP/mainHP/.pytest_cache
 django/mainHP/mainHP/.coverage
 
 django/mainHP/db.sqlite3
-
-django/mainHP/mainHP/settings/development.py
 django/mainHP/*/migrations/
+django/mainHP/.env/production
