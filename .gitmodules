@@ -1,0 +1,3 @@
+[submodule "django/mainHP"]
+	path = django/mainHP
+	url = git@github.com:kkiyama117/django-HP.git
