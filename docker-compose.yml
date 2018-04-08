@@ -21,11 +21,11 @@ services:
     stdin_open: true
     build:
       context: ./django
-    command: uwsgi --ini uwsgi.ini
     volumes:
-      - ./django/mainHP:/uwsgi/mainHP
+      - ./django/mainHP:/mainHP
+      - ./django/init.sh:/mainHP/init.sh
+      - ./django/uwsgi.ini:/mainHP/uwsgi.ini
       - ./django/static:/static
-      - ./django:/uwsgi
     expose:
       - "8080"
     environment:
