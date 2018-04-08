@@ -9,10 +9,10 @@ ADD mainHP /mainHP
 ADD static /static
 
 WORKDIR /uwsgi
-RUN pip install -r /uwsgi/requirements.in
+RUN pip install -r requirements.in
 
 WORKDIR /mainHP
-RUN pip install -r /mainHP/requirements.in
+RUN pip install -r requirements.in
 CMD init.sh
 
 WORKDIR /uwsgi
