@@ -23,7 +23,7 @@ services:
       context: ./django
     command: uwsgi --ini uwsgi.ini
     volumes:
-      - ./django/mainHP:/mainHP
+      - ./django/mainHP:/uwsgi/mainHP
       - ./django/static:/static
       - ./django:/uwsgi
     expose:

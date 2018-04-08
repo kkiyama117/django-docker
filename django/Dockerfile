@@ -1,18 +1,17 @@
 FROM python:3.6
 ENV PYTHONUNBUFFERED 1
 
-ADD . /uwsgi
+RUN mkdir -p /static
+COPY static/* /static/
 
 RUN mkdir -p /mainHP
-RUN mkdir -p /static
-ADD mainHP /mainHP
-ADD static /static
+ADD requirements.in  /mainHP/
+RUN ["pip", "install", "-r", "mainHP/requirements.in"]
 
-WORKDIR /uwsgi
-RUN pip install -r requirements.in
+ADD mainHP/* /mainHP/
+COPY uwsgi.ini init.sh /mainHP/
+RUN ["pip", "install", "-r", "mainHP/requirements.in"]
 
 WORKDIR /mainHP
-RUN pip install -r requirements.in
-CMD init.sh
-
-WORKDIR /uwsgi
+RUN ["chmod", "+x", "./init.sh"]
+ENTRYPOINT bash -c './init.sh && uwsgi --ini uwsgi.ini'

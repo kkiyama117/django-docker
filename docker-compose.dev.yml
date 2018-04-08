@@ -23,15 +23,17 @@ services:
     stdin_open: true
     build:
       context: ./django
-    command: uwsgi --ini uwsgi.ini
     volumes:
       - ./django/mainHP:/mainHP
+      - ./django/init.sh:/mainHP/init.sh
+      - ./django/uwsgi.ini:/mainHP/uwsgi.ini
       - ./django/static:/static
-      - ./django:/uwsgi
     expose:
       - "8080"
     environment:
       - ENVIRONMENT=staging
+    depends_on:
+      - db
     networks:
       - front
       - back
