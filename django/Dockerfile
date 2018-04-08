@@ -2,7 +2,7 @@ FROM python:3.6
 ENV PYTHONUNBUFFERED 1
 
 RUN mkdir -p /static
-COPY static/* /static/
+ADD static /static
 
 RUN mkdir -p /mainHP
 ADD requirements.in  /mainHP/
