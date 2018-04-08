@@ -13,8 +13,6 @@ RUN pip install -r /uwsgi/requirements.in
 
 WORKDIR /mainHP
 RUN pip install -r /mainHP/requirements.in
-CMD python manage.py makemigrations
-CMD python manage.py migrate
-CMD python manage.py collectstatic
+CMD init.sh
 
 WORKDIR /uwsgi
