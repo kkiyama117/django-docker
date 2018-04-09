@@ -9,7 +9,7 @@ ADD requirements.in  /mainHP/
 RUN ["pip", "install", "-r", "mainHP/requirements.in"]
 
 COPY uwsgi.ini init.sh /
-RUN ["chmod", "+x"," "/init.sh"]
+RUN ["chmod", "+x", "/init.sh"]
 RUN ["chmod", "+r", "/uwsgi.ini"]
 ADD mainHP/* /mainHP/
 RUN ["pip", "install", "-r", "mainHP/requirements.in"]
