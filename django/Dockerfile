@@ -15,5 +15,5 @@ ADD mainHP/* /mainHP/
 RUN ["pip", "install", "-r", "mainHP/requirements.in"]
 
 WORKDIR /mainHP
-ENTRYPOINT ["bash", "-c"]
-CMD './init.sh && uwsgi --ini uwsgi.ini'
+ENTRYPOINT ["./init.sh", "&&"]
+CMD 'echo fin'
