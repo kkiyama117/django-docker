@@ -10,6 +10,8 @@
 - django - settings.py
   - `STATIC_ROOT = "/static/"`
   - `STATIC_URL = "/static/"`
+- shell - `./django/init.sh`
+  - Update or Empty it
 
 ## Usage
 ### initializing
