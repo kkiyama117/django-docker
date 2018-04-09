@@ -21,6 +21,7 @@ services:
     stdin_open: true
     build:
       context: ./django
+    command: "./init.sh && uwsgi --ini uwsgi.ini"
     volumes:
       - ./django/mainHP:/mainHP
       - ./django/init.sh:/mainHP/init.sh
