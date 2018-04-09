@@ -8,10 +8,12 @@ RUN mkdir -p /mainHP
 ADD requirements.in  /mainHP/
 RUN ["pip", "install", "-r", "mainHP/requirements.in"]
 
+COPY uwsgi.ini init.sh /
+RUN ["chmod", "+x", /init.sh"]
+RUN ["chmod", "+r", /uwsgi.ini"]
 ADD mainHP/* /mainHP/
-COPY uwsgi.ini init.sh /mainHP/
 RUN ["pip", "install", "-r", "mainHP/requirements.in"]
 
 WORKDIR /mainHP
-RUN ["chmod", "+x", "./init.sh"]
-ENTRYPOINT bash -c './init.sh && uwsgi --ini uwsgi.ini'
+ENTRYPOINT bash -c
+CMD ["'./init.sh && uwsgi --ini uwsgi.ini'"]
