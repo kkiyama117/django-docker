@@ -1,8 +1,9 @@
 FROM python:3.6
 ENV PYTHONUNBUFFERED 1
 
-RUN apt update & apt upgrade
-RUN apt install postgresql
+RUN apt-get update
+RUN apt-get upgrade -y
+RUN apt-get install postgresql -y
 
 RUN mkdir -p /static
 ADD static /static
