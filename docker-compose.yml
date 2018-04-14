@@ -36,10 +36,10 @@ services:
     links:
       - redis
   redis:
-    image: redis:latest
+    image: redis
     expose:
       - "8080"
     volumes:
-       - redis-data:/data
+       - redis:/data
 volumes:
-  - redis-data
+  redis
