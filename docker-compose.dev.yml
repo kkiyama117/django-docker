@@ -57,11 +57,11 @@ services:
     expose:
       - "6379"
     volumes:
-       - redis-data:/data
+       - redis:/data
 
 volumes:
   redis:
-    
+
 networks:
   front:
   back:
