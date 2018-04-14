@@ -37,3 +37,7 @@ services:
       - redis
   redis:
     image: redis:latest
+    expose:
+      - "8080"
+    volumes:
+       - redis-data:/data
