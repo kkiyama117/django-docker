@@ -41,3 +41,5 @@ services:
       - "8080"
     volumes:
        - redis-data:/data
+volumes:
+  - redis-data
