@@ -10,13 +10,13 @@ ADD static /static
 
 RUN mkdir -p /mainHP
 ADD requirements.in  /mainHP/
-RUN ["pip", "install", "-r", "mainHP/requirements.in"]
+RUN ["pip", "install", "-r", "mainHP/requirements/production.txt"]
 
 COPY uwsgi.ini init.sh /mainHP/
 RUN ["chmod", "+x", "/mainHP/init.sh"]
 RUN ["chmod", "+r", "/mainHP/uwsgi.ini"]
 ADD mainHP/* /mainHP/
-RUN ["pip", "install", "-r", "mainHP/requirements.in"]
+RUN ["pip", "install", "-r", "mainHP/requirements.txt"]
 
 WORKDIR /mainHP
 CMD ["./init.sh"]
