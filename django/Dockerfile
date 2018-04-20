@@ -16,7 +16,7 @@ COPY uwsgi.ini init.sh /mainHP/
 RUN ["chmod", "+x", "/mainHP/init.sh"]
 RUN ["chmod", "+r", "/mainHP/uwsgi.ini"]
 ADD mainHP/* /mainHP/
-RUN ["pip", "install", "-r", "mainHP/requirements.txt"]
+RUN ["pip", "install", "-r", "mainHP/requirements.in"]
 
 WORKDIR /mainHP
 CMD ["./init.sh"]
