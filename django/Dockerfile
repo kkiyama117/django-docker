@@ -10,6 +10,7 @@ ADD static /static
 
 RUN mkdir -p /mainHP
 ADD requirements.in  /mainHP/
+RUN ["pip", "install", "-U", "pip"]
 RUN ["pip", "install", "-r", "mainHP/requirements.in"]
 
 COPY uwsgi.ini init.sh /mainHP/
